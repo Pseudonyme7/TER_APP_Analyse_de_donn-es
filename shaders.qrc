@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ressources/basic.fsh</file>
+        <file>ressources/basic.vsh</file>
+        <file>ressources/color_frag.spv</file>
+        <file>ressources/color_vert.spv</file>
+    </qresource>
+</RCC>

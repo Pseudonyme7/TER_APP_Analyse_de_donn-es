@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1124</width>
+    <height>648</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="BoutonCreatGroup">
+        <property name="text">
+         <string>Create group by Var</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="ListGroup"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="BoutonDelGroup">
+        <property name="text">
+         <string>Delete Group</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="1">
+     <widget class="QTableView" name="Table1"/>
+    </item>
+    <item row="0" column="2">
+     <widget class="QTableView" name="Table2"/>
+    </item>
+    <item row="1" column="1" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QTabWidget" name="TableauPrincipal">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="LAT">
+         <attribute name="title">
+          <string>Lattice</string>
+         </attribute>
+        </widget>
+        <widget class="QWidget" name="SP">
+         <attribute name="title">
+          <string>ScatterPlot Mouse filter</string>
+         </attribute>
+         <widget class="QWidget" name="layoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>10</y>
+            <width>606</width>
+            <height>26</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="LabelX">
+               <property name="text">
+                <string>X :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_2"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="LabelY">
+               <property name="text">
+                <string>Y :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="LabelZ">
+               <property name="text">
+                <string>Z :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_3"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>Mesure :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_5"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Animation :</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_4"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="gridLayoutWidget">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>50</y>
+            <width>541</width>
+            <height>181</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2"/>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="HIST">
+         <attribute name="title">
+          <string>Histogram</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="maximumSize">
+           <size>
+            <width>10</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>HIDE 2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton">
+          <property name="maximumSize">
+           <size>
+            <width>10</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>HIDE SIDE WIDGETS</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1124</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Load_Data"/>
+    <addaction name="action_Compute_xFD"/>
+    <addaction name="action_ScatterPlot_View"/>
+    <addaction name="separator"/>
+    <addaction name="action_Load_data_and_compute_xFD"/>
+    <addaction name="action_Load_and_plot_data"/>
+    <addaction name="action_DB_Connection"/>
+    <addaction name="separator"/>
+    <addaction name="actionxFD_Analysis"/>
+    <addaction name="action_Stat_of_a_relation"/>
+    <addaction name="separator"/>
+    <addaction name="action_Quit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Windows">
+    <property name="title">
+     <string>&amp;Windows</string>
+    </property>
+    <addaction name="action_Data_Set"/>
+    <addaction name="action_Detail_of_FDs"/>
+    <addaction name="action_Global_stats"/>
+    <addaction name="separator"/>
+    <addaction name="action_Data_description"/>
+   </widget>
+   <widget class="QMenu" name="menu_Algo_FD_Extraction">
+    <property name="title">
+     <string>&amp; Algo FD Extraction</string>
+    </property>
+    <addaction name="action_AFD_Extraction"/>
+    <addaction name="action_AFD_Extraction_OPT"/>
+    <addaction name="action_AFD_Extraction_Lectic"/>
+    <addaction name="action_AFD_Extraction_ADFS"/>
+    <addaction name="action_EFD_Extraction_DFS"/>
+    <addaction name="action_EFD_Extraction_FS"/>
+    <addaction name="action_AFD_Extraction_PAR"/>
+   </widget>
+   <widget class="QMenu" name="menu_Missing_Values">
+    <property name="title">
+     <string>&amp;Missing Values</string>
+    </property>
+    <addaction name="action_MissingValues_are_errors"/>
+    <addaction name="action_MissingValues_are_distincts"/>
+    <addaction name="action_MissingValues_are_equals"/>
+    <addaction name="action_MissingValues_skip_tuple"/>
+   </widget>
+   <widget class="QMenu" name="menu_BatchProcessus">
+    <property name="title">
+     <string>&amp;BatchProcessus</string>
+    </property>
+    <addaction name="action_LoadDataToNULLValues"/>
+    <addaction name="action_StatOfExisting_Relations"/>
+    <addaction name="action_xFD_Folders_Analysis"/>
+    <addaction name="action_Genuine_FDs"/>
+    <addaction name="action_Genuine_FDs_Folders"/>
+    <addaction name="action_Convert_CSV_to_ORACLE"/>
+   </widget>
+   <widget class="QMenu" name="menu_Compare_xFD">
+    <property name="title">
+     <string>&amp;Compare xFD</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_Ask_Mr_Novelli"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menu_Windows"/>
+   <addaction name="menu_Algo_FD_Extraction"/>
+   <addaction name="menu_Missing_Values"/>
+   <addaction name="menu_BatchProcessus"/>
+   <addaction name="menu_Compare_xFD"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_Load_Data">
+   <property name="text">
+    <string>&amp;Load Data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="action_Compute_xFD">
+   <property name="text">
+    <string>&amp;Compute xFD</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="action_ScatterPlot_View">
+   <property name="text">
+    <string>&amp;ScatterPlot View</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="action_Load_data_and_compute_xFD">
+   <property name="text">
+    <string>&amp;Load data and compute xFD</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+O</string>
+   </property>
+  </action>
+  <action name="action_Load_and_plot_data">
+   <property name="text">
+    <string>&amp;Load and plot data</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="action_DB_Connection">
+   <property name="text">
+    <string>&amp;DB Connection</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionxFD_Analysis">
+   <property name="text">
+    <string>&amp;xFD Analysis</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="action_Stat_of_a_relation">
+   <property name="text">
+    <string>&amp;Stat of a relation</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit!</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="action_Data_Set">
+   <property name="text">
+    <string>&amp;Data Set</string>
+   </property>
+  </action>
+  <action name="action_Detail_of_FDs">
+   <property name="text">
+    <string>&amp;Detail of FDs</string>
+   </property>
+  </action>
+  <action name="action_Global_stats">
+   <property name="text">
+    <string>&amp;Global stats</string>
+   </property>
+  </action>
+  <action name="action_Data_description">
+   <property name="text">
+    <string>&amp;Data description</string>
+   </property>
+  </action>
+  <action name="action_AFD_Extraction">
+   <property name="text">
+    <string>&amp;AFD Extraction</string>
+   </property>
+  </action>
+  <action name="action_AFD_Extraction_OPT">
+   <property name="text">
+    <string>&amp;AFD Extraction OPT</string>
+   </property>
+  </action>
+  <action name="action_AFD_Extraction_Lectic">
+   <property name="text">
+    <string>&amp;AFD Extraction Lectic</string>
+   </property>
+  </action>
+  <action name="action_AFD_Extraction_ADFS">
+   <property name="text">
+    <string>&amp;AFD Extraction ADFS</string>
+   </property>
+  </action>
+  <action name="action_EFD_Extraction_DFS">
+   <property name="text">
+    <string>&amp;EFD Extraction DFS</string>
+   </property>
+  </action>
+  <action name="action_EFD_Extraction_FS">
+   <property name="text">
+    <string>&amp;EFD Extraction FS</string>
+   </property>
+  </action>
+  <action name="action_AFD_Extraction_PAR">
+   <property name="text">
+    <string>&amp;AFD Extraction PAR</string>
+   </property>
+  </action>
+  <action name="action_MissingValues_are_errors">
+   <property name="text">
+    <string>&amp;MissingValues are errors</string>
+   </property>
+  </action>
+  <action name="action_MissingValues_are_distincts">
+   <property name="text">
+    <string>&amp;MissingValues are distincts</string>
+   </property>
+  </action>
+  <action name="action_MissingValues_are_equals">
+   <property name="text">
+    <string>&amp;MissingValues are equals</string>
+   </property>
+  </action>
+  <action name="action_MissingValues_skip_tuple">
+   <property name="text">
+    <string>&amp;MissingValues, skip tuple</string>
+   </property>
+  </action>
+  <action name="action_LoadDataToNULLValues">
+   <property name="text">
+    <string>&amp;LoadDataToNULLValues</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_StatOfExisting_Relations">
+   <property name="text">
+    <string>&amp;StatOfExisting Relations</string>
+   </property>
+  </action>
+  <action name="action_xFD_Folders_Analysis">
+   <property name="text">
+    <string>&amp;xFD Folders Analysis</string>
+   </property>
+  </action>
+  <action name="action_Genuine_FDs">
+   <property name="text">
+    <string>&amp;Genuine FDs</string>
+   </property>
+  </action>
+  <action name="action_Genuine_FDs_Folders">
+   <property name="text">
+    <string>&amp;Genuine FDs Folders</string>
+   </property>
+  </action>
+  <action name="action_Convert_CSV_to_ORACLE">
+   <property name="text">
+    <string>&amp;Convert CSV to ORACLE</string>
+   </property>
+  </action>
+  <action name="action_Ask_Mr_Novelli">
+   <property name="text">
+    <string>&amp;Ask Mr Novelli</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
